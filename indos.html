@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A One Bright Coaching Center - Best Tuition Classes in Jalandhar | Coaching for Class 6-12</title>
+    <meta name="description" content="Excellence Academy offers top-quality tuition classes for Class 6-12 students in Delhi. Expert teachers, proven results, and comprehensive coaching for Maths, Science, English & more.">
+    <meta name="keywords" content="best tuition classes in Delhi, coaching for Class 6-12, top science tuition, maths coaching, CBSE tuition, ICSE coaching, board exam preparation">
+    <meta name="author" content="Excellence Academy">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Excellence Academy - Best Tuition Classes in Delhi">
+    <meta property="og:description" content="Expert coaching for Class 6-12 students with proven results and personalized attention.">
+    <meta property="og:type" content="website">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+            color: rgb(5, 5, 5);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #000000;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f39c12;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 3px;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            margin-top: 70px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .cta-button {
+            background: #f39c12;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .cta-button:hover {
+            background: #e67e22;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #f39c12;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        .section-alt {
+            background: white;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .about-image {
+            text-align: center;
+            background: #3498db;
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            font-size: 1.2rem;
+        }
+
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .mission, .vision {
+            padding: 2rem;
+            background: #ecf0f1;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+        }
+
+        /* Courses Section */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .course-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .course-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .course-details {
+            margin-bottom: 1rem;
+        }
+
+        .grade-levels {
+            background: #e8f4f8;
+            padding: 10px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin: 5px;
+            font-size: 0.9rem;
+            color: #2c3e50;
+        }
+
+        /* Timetable Section */
+        .timetable-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .batch-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .batch-time {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+
+        .availability {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        .available {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .limited {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        /* Testimonials Section */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            font-size: 4rem;
+            color: #3498db;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            padding-top: 1rem;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .testimonial-grade {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+  /* 🔹 Contact Section Layout */
+.contact-content {
+    display: grid;
+    justify-content: center; /* Center the grid item */
+    gap: 3rem;
+    align-items: start;
+    margin-top: 3rem;
+}
+
+@media (min-width: 901px) {
+    .contact-content {
+        grid-template-columns: minmax(0, 700px); /* Constrain width on large screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 🔹 Contact Form Box */
+.contact-form {
+    background: #fef6e4;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.contact-form:hover {
+    transform: translateY(-3px);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ecf0f1;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #f9fbfc;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #3498db;
+    background-color: #fff;
+}
+
+/* 🔹 Contact Info Box */
+.contact-info {
+    background: linear-gradient(145deg, #6a11cb 0%, #2575fc 100%);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    text-align: center; /* Center text inside the box */
+}
+
+.contact-info h3 {
+    margin-bottom: 2rem; /* Increased margin */
+    color: #ffffff;
+    font-size: 1.8rem; /* Larger font size */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.contact-info a { color: #ffffff; text-decoration: none; font-weight: 500; }
+.contact-info a:hover { text-decoration: underline; }
+
+/* 🔹 Contact Items */
+.contact-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+    text-align: left;
+}
+
+.contact-item {
+    margin-bottom: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-icon {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem; /* Larger icon */
+    box-shadow: none; /* Removed old shadow */
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+/* 🔹 WhatsApp Button */
+.whatsapp-button {
+    background: #25d366;
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.whatsapp-button:hover {
+    background: #1ebe5d;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+.map-container {
+    margin-top: 2.5rem;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    height: 350px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 0 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #3498db;
+        }
+
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover {
+            color: #f39c12;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .mission-vision {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .hero {
+                padding: 100px 0 60px;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">A-One Bright Coaching Center</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#timetable">Batches</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Transform Your Academic Journey</h1>
+            <p>Jalandhar's Premier Tuition Center for Classes 6-12 | Expert Teacher | Proven Results</p>
+            <a href="#contact" class="cta-button"> Free Demo Class</a>
+            <a href="tel:+919876543210" class="cta-button">Call Now</a>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div>Students Enrolled</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">95%</div>
+                    <div>Success Rate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div>Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">90%</div>
+                    <div>success rate in competitive exams</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section section-alt">
+        <div class="container">
+            <h2>About A-One Bright Coaching Center</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Welcome to A-One Bright Coaching Center ,  most trusted tuition center for students from Classes 6 to 12. For over 15 years, we have been committed to providing exceptional education and nurturing young minds to achieve their academic goals.</p>
+                    
+                    <p>Our state-of-the-art facilities, experienced faculty, and innovative teaching methods have helped thousands of students excel in their studies and secure admissions to top colleges and universities.</p>
+                    
+                    <p>We believe that every student is unique and deserves personalized attention. Our small batch sizes ensure that each student receives the individual care they need to succeed.</p>
+                    
+                    <h3 style="margin-top: 2rem; color: #2c3e50;">Founder's Message</h3>
+                    <p style="font-style: italic; padding: 1rem; background: #f8f9fa; border-left: 4px solid #3498db; margin-top: 1rem;">
+                        "Education is not just about scoring marks; it's about building character, developing critical thinking, and preparing students for life's challenges. At Excellence Academy, we strive to create confident, capable individuals who can make a positive impact on society." - <strong>Er. Aditya Kumar Singh, Founder</strong>
+                    </p>
+                </div>
+                <div class="about-image">
+                    <h3>Why Choose Us?</h3>
+                    <ul style="text-align: left; margin-top: 1rem;">
+                        <li>✓ Expert Faculty with 10+ years experience</li>
+                        <li>✓ Small batch sizes (Max 20 students)</li>
+                        <li>✓ Regular assessments and progress tracking</li>
+                        <li>✓ Modern teaching aids and technology</li>
+                        <li>✓ Flexible timing options</li>
+                        <li>✓ Parent-teacher interaction programs</li>
+                        <li>✓ Exam preparation and doubt clearing sessions</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mission-vision">
+                <div class="mission">
+                    <h3>Our Mission</h3>
+                    <p>To provide quality education that empowers students to achieve academic excellence while developing their personality, confidence, and life skills for a successful future.</p>
+                </div>
+                <div class="vision">
+                    <h3>Our Vision</h3>
+                    <p>To be the leading educational institution that transforms students into confident, knowledgeable, and responsible citizens who contribute positively to society.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="section">
+        <div class="container">
+            <h2>Courses Offered</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <h3>Mathematics</h3>
+                    <div class="course-details">
+                        <p>Comprehensive math coaching covering algebra, geometry, trigonometry, and calculus. Our structured approach helps students build strong foundations and excel in board exams.</p>
+                        <div style="margin-top: 1rem;">
+                            <span class="grade-levels">Class 6-8</span>
+                            <span class="grade-levels">Class 9-10</span>
+                            <span class="grade-levels">Class 11-12</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="cta-button" style="margin-top: 1rem;">Enroll Now</a>
+                </div>
+                
+                <div class="course-card">
+                    <h3>Science (Physics, Chemistry, Biology)</h3>
+                    <div class="course-details">
+                        <p>In-depth science coaching with practical experiments and conceptual clarity. Perfect preparation for CBSE, ICSE, and competitive exams like JEE and NEET.</p>
+                        <div style="margin-top: 1rem;">
+                            <span class="grade-levels">Class 6-8</span>
+                            <span class="grade-levels">Class 9-10</span>
+                            <span class="grade-levels">Class 11-12 (PCM/PCB)</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="cta-button" style="margin-top: 1rem;">Enroll Now</a>
+                </div>
+                
+                <div class="course-card">
+                    <h3>English</h3>
+                    <div class="course-details">
+                        <p>Improve grammar, vocabulary, writing skills, and literature understanding. Focus on communication skills and exam-oriented preparation.</p>
+                        <div style="margin-top: 1rem;">
+                            <span class="grade-levels">Class 6-8</span>
+                            <span class="grade-levels">Class 9-10</span>
+                            <span class="grade-levels">Class 11-12</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="cta-button" style="margin-top: 1rem;">Enroll Now</a>
+                </div>
+                
+                <div class="course-card">
+                    <h3>Social Studies</h3>
+                    <div class="course-details">
+                        <p>Comprehensive coverage of History, Geography, Civics, and Economics with interactive teaching methods and current affairs integration.</p>
+                        <div style="margin-top: 1rem;">
+                            <span class="grade-levels">Class 6-8</span>
+                            <span class="grade-levels">Class 9-10</span>
+                            <span class="grade-levels">Class 11-12</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="cta-button" style="margin-top: 1rem;">Enroll Now</a>
+                </div>
+                
+                <div class="course-card">
+                    <h3>Commerce</h3>
+                    <div class="course-details">
+                        <p>Specialized coaching for Accountancy, Business Studies, and Economics. Practical approach with real-world examples and case studies.</p>
+                        <div style="margin-top: 1rem;">
+                            <span class="grade-levels">Class 11-12</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="cta-button" style="margin-top: 1rem;">Enroll Now</a>
+                </div>
+                
+                <div class="course-card">
+                    <h3>Competitive Exam Preparation</h3>
+                    <div class="course-details">
+                        <p>Special batches for JEE Main/Advanced, NEET, and other competitive exams with mock tests and performance analysis.</p>
+                        <div style="margin-top: 1rem;">
+                            <span class="grade-levels">Class 11-12</span>
+                            <span class="grade-levels">Droppers</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="cta-button" style="margin-top: 1rem;">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timetable Section -->
+    <section id="timetable" class="section section-alt">
+        <div class="container">
+            <h2>Batch Timings & Availability</h2>
+            <div class="timetable-grid">
+               
+                <div class="batch-card">
+                    <div class="batch-time">Afternoon Batch</div>
+                    <p><strong>Time:</strong> 2:00 PM - 4:00 PM</p>
+                    <p><strong>Days:</strong> Monday to Saturday</p>
+                    <p><strong>Suitable for:</strong> Class 6-10</p>
+                </div>
+                
+                <div class="batch-card">
+                    <div class="batch-time">Evening Batch</div>
+                    <p><strong>Time:</strong> 5:00 PM - 7:00 PM</p>
+                    <p><strong>Days:</strong> Monday to Saturday</p>
+                    <p><strong>Suitable for:</strong> Class 9-12</p>
+                </div>
+                
+                <div class="batch-card">
+                    <div class="batch-time">Weekend Batch</div>
+                    <p><strong>Time:</strong> 9:00 AM - 1:00 PM</p>
+                    <p><strong>Days:</strong> Saturday & Sunday</p>
+                    <p><strong>Suitable for:</strong> All Classes</p>
+                </div>
+                
+                <div class="batch-card">
+                    <div class="batch-time">Crash Course</div>
+                    <p><strong>Time:</strong> Flexible</p>
+                    <p><strong>Days:</strong> As per requirement</p>
+                    <p><strong>Suitable for:</strong> Exam Preparation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section">
+        <div class="container">
+            <h2>What Our Students Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        A-One Bright Coaching Center transformed my understanding of Mathematics. The teachers are incredibly patient and make complex concepts so easy to understand. I scored 98% in my board exams!
+                    </div>
+                    <div class="testimonial-author">Priya Sharma</div>
+                    <div class="testimonial-grade">Class 12 - CBSE Board</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        The science faculty here is amazing! They use practical examples that make learning fun. I cleared JEE Main with a great rank thanks to their guidance.
+                    </div>
+                    <div class="testimonial-author">Arjun Patel</div>
+                    <div class="testimonial-grade">Class 12 - JEE Main Qualified</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        I was struggling with English literature, but the teachers here helped me develop a love for the subject. My communication skills have improved tremendously.
+                    </div>
+                    <div class="testimonial-author">Sneha Gupta</div>
+                    <div class="testimonial-grade">Class 10 - 96% in English</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        The doubt-clearing sessions are extremely helpful. Teachers are always available to help, and the study material is comprehensive and well-structured.
+                    </div>
+                    <div class="testimonial-author">Rohit Kumar</div>
+                    <div class="testimonial-grade">Class 9 - Overall 94%</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        A-One Bright Coaching Center helped me build confidence in Science subjects. The regular tests and feedback helped me identify my weak areas and improve them.
+                    </div>
+                    <div class="testimonial-author">Ananya Singh</div>
+                    <div class="testimonial-grade">Class 11 - Science Stream</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        The teaching methodology is excellent. Complex topics are broken down into simple, understandable parts. I highly recommend this academy to all students.
+                    </div>
+                    <div class="testimonial-author">Vikash Agarwal</div>
+                    <div class="testimonial-grade">Class 12 - Commerce Stream</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <!-- Centered Contact Info -->
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="contact-details-grid">
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <strong>Phone:</strong><br>
+                                <a href="tel:+917888738156">+91 78887 38156</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <strong>Address:</strong><br>
+                                123 Lane, Dakhoha, Jalandhar, India
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/917888738156" target="_blank" class="whatsapp-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.068-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.1-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                        </svg>
+                        Chat on WhatsApp
+                    </a>
+
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3408.1639193353804!2d75.6348410756011!3d31.31063177430118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5976a9129c89%3A0x9653a7fda8dfd150!2sA%20One%20Bright%20Coaching!5e0!3m2!1sen!2sin!4v1730532962884!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>      
+    <!-- Footer -->
+    <footer>        
+@ 2025 A-One Bright Coaching Center . All rights reserved.
+                    <div class="name-bottom-right">
+    Designed and developed By Pardeep Rattan
+  </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+            mobileMenu.classList.toggle('toggle');
+        });
+
+        // Form Submission Handling
+    // (Form removed by request)
+    </script>
+</body>
+</html>
